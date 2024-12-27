@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A stunning and user-friendly website with modern dropdown navigation.">
+    <meta name="author" content="Neeharika">
+    <title> Dropdown Website</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #f9f9f9, #e3f2fd);
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #0078d7, #004d99);
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 1.8em;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+        }
+        .dropdown-content a {
+            color: #0078d7;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            color: #004d99;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        main h2 {
+            font-size: 2.4em;
+            color: #004d99;
+            margin-bottom: 20px;
+        }
+        main p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+        }
+        footer {
+            background: #0078d7;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+        footer p {
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .dropdown-content {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <a href="#">Explore</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>  
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to my Website</h2>
+        <p>Navigate through our beautifully designed pages using the dropdown menu above. We ensure a delightful browsing experience for our users.</p>
+    </main>
+</body>
+</html>
